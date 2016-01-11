@@ -63,24 +63,26 @@
                <h4>Code:</h4>
                <h5>{{listing.code}}</h5>
                <h4>Building Name:</h4>
-               <h4>Coordinates:</h4>
+               <h4>Coordinates</h4>
+               <h4>Longitude:</h4>
+               <h4>Latitude</h4>
                <h4>Address:</h4>
             </div>
 
             <div ng-show = "showAdd">
               <h5>Add a new listing by filling out the information below:</h5>
-              <form nonvalidate>
+              <form class = "form-horizontal" role = "form" ng-submit = "addListing()">
                 Code:<br>
-                <input type="text" ng-model="entry.code"><br>
+                <input type="text" class = "form-control" name = "code" ng-model="code"><br>
                 Building Name:<br>
-                <input type="text" ng-model="entry.name"><br>
+                <input type="text" class = "form-control" name = "name" ng-model="name"><br>
                 Coordinates<br>
                 Longitude:<br>
-                <input type="text" ng-model="entry.longitude"><br>
+                <input type="text" class = "form-control" name = "longitude" ng-model="longitude"><br>
                 Latitude:<br>
-                <input type="text" ng-model="entry.latitude"><br>
+                <input type="text" class = "form-control" name = "latitude" ng-model="latitude"><br>
                 Address:<br>
-                <input type="text" ng-model="entry.address">
+                <input type="text" class = "form-control" name = "address" ng-model="address">
                 <br><br>
                 <button ng-click="addListing()">Submit New Listing</button>
               </form>
