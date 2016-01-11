@@ -42,16 +42,16 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
     $scope.showDetails = function(index) {
         $scope.showInfo = true;
         $scope.showAdd = false;
-        var address = $scope.listings[index].address,
-            lat = $scope.listings[index].coordinates.latitude,
-            long = $scope.listings[index].coordinates.longitude;
-        if(typeof lat === 'undefined' || typeof long === 'undefined')
-        {
-            $scope.detailedinfo = address;
-        }
-        else {
-          $scope.detailedInfo = address + ' @' + lat + ', ' + long;
-        }
+
+        $scope.code = '';
+        $scope.building = '';
+        $scope.address = '';
+        $scope.coords = '';
+
+        $scope.code = $scope.listings[index].code;
+        $scope.building = $scope.listings[index].name;
+        $scope.address = $scope.listings[index].address;
+        $scope.coords = $scope.listings[index].coordinates.latitude + ', ' + $scope.listings[index].coordinates.longitude;
     };
 
   }
