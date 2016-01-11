@@ -15,11 +15,12 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.showAdd = true;
     }
 
-    $scope.addListing = function() {
-      /*
-      $scope.todos.push(newItem);
-      */
+    $scope.addListing = function(entry) {
+
+      $scope.listings.push(entry);
+
       $scope.showAdd = false;
+      $scope.showInfo = true;
     };
 
     $scope.deleteListing = function(index) {
