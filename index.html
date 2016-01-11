@@ -37,7 +37,7 @@
                       * include a way to remove individual listings
                 -->
 
-              <tr ng-repeat = "listing in listings | filter: query" ng-click = "showDetails($index)" >
+              <tr ng-repeat = "listing in listings | filter: query track by $index" ng-click = "showDetails($index)" >
                 <td>{{listing.code}}</td>
                 <td>{{listing.name}}</td>
                 <td>
@@ -72,18 +72,18 @@
 
             <div ng-show = "showAdd">
               <h5>Add a new listing by filling out the information below:</h5>
-              <form nonvalidate>
+              <form class = "form-horizontal" role = "form">
                 Code:<br>
-                <input type="text" ng-model="entry.code"><br>
+                <input type="text" class = "form-control" name = "code" ng-model="entry.code"><br>
                 Building Name:<br>
-                <input type="text" ng-model="entry.name"><br>
+                <input type="text" class = "form-control" name = "name" ng-model="entry.name"><br>
                 Coordinates<br>
                 Longitude:<br>
-                <input type="text" ng-model="entry.longitude"><br>
+                <input type="text" class = "form-control" name = "longitude" ng-model="entry.coordinates.longitude"><br>
                 Latitude:<br>
-                <input type="text" ng-model="entry.latitude"><br>
+                <input type="text" class = "form-control" name = "latitude" ng-model="entry.coordinates.latitude"><br>
                 Address:<br>
-                <input type="text" ng-model="entry.address">
+                <input type="text" class = "form-control" name = "address" ng-model="entry.address">
                 <br><br>
                 <button ng-click="addListing(entry)">Submit New Listing</button>
               </form>
