@@ -7,9 +7,10 @@
   </head>
   <body ng-app="directoryApp">
     <div class="container">
-      <div class="row page-header">
-        <h1>UF Directory App</h1>
+      <div>
+        <h1 class="title">UF Directory App</h1>
       </div>
+      <section class="row">
       <div class="row" ng-controller="ListingsController">
         <div class="col-md-6">
           <div class="input-group" id="searchBar">
@@ -56,7 +57,7 @@
         <div class="col-md-6">
           <div class="jumbotron">
             <div ng-hide = "defaultMessage" class = "clickToDisplay">
-              <h4>Select a listing to view detailed information.</h4>
+              <h3>Select a listing to view detailed information.</h3>
             </div>
             <div ng-hide = "showInfo">
               <h2>Detailed Information</h2>
@@ -89,7 +90,7 @@
                 Address:<br>
                 <input type="text" class = "form-control" name = "address" ng-model="entry.address">
                 <br><br>
-                <button ng-click="addListing(entry)">Submit New Listing</button>
+                <button ng-click="addListing(entry)" class="btn btn-alt">Submit New Listing</button>
               </form>
             </div>
             

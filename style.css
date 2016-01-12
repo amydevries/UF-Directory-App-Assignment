@@ -14,7 +14,7 @@ Custom styles
 */
 
 body{
-  //background: #293f50;
+  background: blue;
   //color: #888;
   font: 300 16px/22px "Yanone Kaffeesatz", sans-serif;
 }
@@ -25,9 +25,9 @@ Typography
 ========================
 */
 
-/*.rowPageHeader{
-	font-family: "Yanone Kaffeesatz", sans-serif;
-}*/
+.title{
+	color:white;
+}
 
 
 /*
@@ -38,6 +38,7 @@ Details panel
 
 .clickToDisplay{
 	text-align: center;
+	font-weight: bold;
 }
 
 /*
@@ -48,12 +49,11 @@ Buttons
 
 .btn{
   border-radius: 5px;
-  color: #fff;
+  color: black;
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
   letter-spacing: .5px;
-  margin: 0;
   text-transform: uppercase;
 }
 
@@ -63,6 +63,17 @@ Buttons
 }
 
 .btn-alt:hover{
+  background: black;
+  color: white;
+}
+
+/*
+========================
+Row
+========================
+*/
+
+row{
   background: #fff;
-  color: #648880;
+  padding: 66px 0 44px 0;
 }
