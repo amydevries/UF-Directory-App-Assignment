@@ -24,18 +24,18 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.showInfo = false;
     };
 
-    $scope.deleteListing = function(index) {
+    $scope.deleteListing = function(listing) {
       /*
       removing something from the todo list
       $scope.todos.splice(index,1);
       */
-      $scope.listings.splice(index,1);
+      $scope.listings.splice($scope.listings.indexOf(listing),1);
       $scope.showInfo = false;
     };
 
 
 
-    $scope.showDetails = function(index) {
+    $scope.showDetails = function(listing) {
         $scope.showInfo = true;
         $scope.showAdd = false;
 
@@ -43,6 +43,8 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         $scope.building = '';
         $scope.address = '';
         $scope.coords = '';
+
+        index = $scope.listings.indexOf(listing);
 
         $scope.code = $scope.listings[index].code;
         $scope.building = $scope.listings[index].name;
