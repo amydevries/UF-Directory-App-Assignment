@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz">
   </head>
   <body ng-app="directoryApp">
     <div class="container">
@@ -54,6 +55,9 @@
         </div>
         <div class="col-md-6">
           <div class="jumbotron">
+            <div ng-hide = "defaultMessage" class = "clickToDisplay">
+              <h4>Select a listing to view detailed information.</h4>
+            </div>
             <div ng-hide = "showInfo">
               <h2>Detailed Information</h2>
               <!--
@@ -95,7 +99,7 @@
               <strong>Success!</strong> Listing successfully added!
             </div>
         </div>
-        <button ng-click="addButton()" class="col-md-2 col-md-offset-2">Add a new listing!</button>
+        <button ng-click="addButton()" class="col-md-2 col-md-offset-2 btn btn-alt">Add a new listing!</button>
       </div>
 
 

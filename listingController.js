@@ -11,9 +11,11 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
     $scope.showAdd = true;
     $scope.showInfo = true;
     $scope.showListAdded = true; 
+    $scope.defaultMessage = false; 
 
     $scope.addButton = function(){
       $scope.showInfo = true;
+      $scope.defaultMessage = true; 
       $scope.showAdd = false;
     }
 
@@ -23,7 +25,9 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
       $scope.showAdd = true;
       $scope.showInfo = true;
+      $scope.defaultMessage = true;
       $scope.showListAdded = false; 
+      $scope.defaultMessage = false; 
     };
 
     $scope.deleteListing = function(listing) {
@@ -33,12 +37,14 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       */
       $scope.listings.splice($scope.listings.indexOf(listing),1);
       $scope.showInfo = true;
+      $scope.defaultMessage = false;
     };
 
 
 
     $scope.showDetails = function(listing) {
         $scope.showInfo = false;
+        $scope.defaultMessage = true;
         $scope.showAdd = true;
 
         $scope.code = '';

@@ -6,3 +6,63 @@
   max-height: 400px;
   overflow: auto;
 }
+
+/*
+===================================
+Custom styles
+===================================
+*/
+
+body{
+  //background: #293f50;
+  //color: #888;
+  font: 300 16px/22px "Yanone Kaffeesatz", sans-serif;
+}
+
+/*
+========================
+Typography
+========================
+*/
+
+/*.rowPageHeader{
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}*/
+
+
+/*
+========================
+Details panel
+========================
+*/
+
+.clickToDisplay{
+	text-align: center;
+}
+
+/*
+===================================
+Buttons
+===================================
+*/
+
+.btn{
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn-alt{
+  border: 1px solid #fff;
+  padding: 10px 30px;
+}
+
+.btn-alt:hover{
+  background: #fff;
+  color: #648880;
+}
