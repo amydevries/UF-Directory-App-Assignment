@@ -8,20 +8,22 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       as described in the assignment spec.
      */
 
-    $scope.showAdd = false;
+    $scope.showAdd = true;
     $scope.showInfo = true;
+    $scope.showListAdded = true; 
 
     $scope.addButton = function(){
-      $scope.showInfo = false;
-      $scope.showAdd = true;
+      $scope.showInfo = true;
+      $scope.showAdd = false;
     }
 
     $scope.addListing = function(entry) {
 
       $scope.listings.push(entry);
 
-      $scope.showAdd = false;
-      $scope.showInfo = false;
+      $scope.showAdd = true;
+      $scope.showInfo = true;
+      $scope.showListAdded = false; 
     };
 
     $scope.deleteListing = function(listing) {
@@ -30,14 +32,14 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.todos.splice(index,1);
       */
       $scope.listings.splice($scope.listings.indexOf(listing),1);
-      $scope.showInfo = false;
+      $scope.showInfo = true;
     };
 
 
 
     $scope.showDetails = function(listing) {
-        $scope.showInfo = true;
-        $scope.showAdd = false;
+        $scope.showInfo = false;
+        $scope.showAdd = true;
 
         $scope.code = '';
         $scope.building = '';
