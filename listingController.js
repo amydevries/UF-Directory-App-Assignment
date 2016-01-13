@@ -25,11 +25,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
 
     $scope.addListing = function(entry) {
-        $scope.enterCode = '';
-        $scope.enterName = '';
-        $scope.enterAddress = '';
-        $scope.enterLongitude = '';
-        $scope.enterLatitude = '';
+        
 
       $scope.listings.push(entry);
 
