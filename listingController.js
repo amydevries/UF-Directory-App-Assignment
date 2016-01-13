@@ -1,5 +1,6 @@
-angular.module('listings').controller('ListingsController', ['$scope', 'Listings',
+angular.module('listings').controller('ListingsController', ['$scope', 'Listings', 
   function($scope, Listings) {
+
     $scope.listings = Listings;
     $scope.detailedInfo = undefined;
 
@@ -8,18 +9,27 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       as described in the assignment spec.
      */
 
+    $scope.addListButton = false; 
     $scope.showAdd = true;
     $scope.showInfo = true;
     $scope.showListAdded = true; 
     $scope.defaultMessage = false; 
 
+
     $scope.addButton = function(){
       $scope.showInfo = true;
       $scope.defaultMessage = true; 
+      $scope.addListButton = true; 
       $scope.showAdd = false;
     }
 
+
     $scope.addListing = function(entry) {
+        $scope.enterCode = '';
+        $scope.enterName = '';
+        $scope.enterAddress = '';
+        $scope.enterLongitude = '';
+        $scope.enterLatitude = '';
 
       $scope.listings.push(entry);
 
@@ -28,16 +38,22 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.defaultMessage = true;
       $scope.showListAdded = false; 
       $scope.defaultMessage = false; 
+      $scope.addListButton = false; 
     };
+
 
     $scope.deleteListing = function(listing) {
       /*
       removing something from the todo list
       $scope.todos.splice(index,1);
       */
-      $scope.listings.splice($scope.listings.indexOf(listing),1);
-      $scope.showInfo = true;
-      $scope.defaultMessage = false;
+      
+
+      if(confirm("Press OK to confirm deletion.")){
+        $scope.listings.splice($scope.listings.indexOf(listing),1);
+        $scope.showInfo = true;
+        $scope.defaultMessage = false;
+      }
     };
 
 

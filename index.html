@@ -5,13 +5,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz">
   </head>
+  
   <body ng-app="directoryApp">
+
     <div class="container">
       <div>
-        <h1 class="title">UF Directory App</h1>
+        <h1 class="title row">UF Directory App</h1>
       </div>
-      <section class="row">
-      <div class="row" ng-controller="ListingsController">
+  
+      <div ng-controller="ListingsController">
         <div class="col-md-6">
           <div class="input-group" id="searchBar">
             <!--
@@ -43,7 +45,7 @@
                 <td>{{listing.code}}</td>
                 <td>{{listing.name}}</td>
                 <td>
-                  <button ng-click="deleteListing(listing)">Delete</button>
+                  <button class="btn btn-alt" ng-confirm-click="Click to confirm deletion." ng-click="deleteListing(listing)" >Delete</button>
                 </td>
               </tr>
             </table>
@@ -65,6 +67,7 @@
                 Include a way to display detailed information about an individual listing:
                      * consider how to use ng-click within the the table to implement this feature. DONE
                -->
+               <!--
                <h4>Code:</h4>
                <h5>{{code}}</h5>
                <h4>Building Name:</h4>
@@ -73,34 +76,95 @@
                <h5>{{coords}}</h5>
                <h4>Address:</h4>
                <h5>{{address}}</h5>
+              -->
+
+              <table class="addListingTable">
+                <tr>
+                  <th class="codeWidth">Code:</th>
+                  <th>Building Name:</th>
+                </tr>
+                <td>{{code}}</td>
+                <td>{{building}}</td>
+              </table>
+              
+              <table class="addListingTable">
+              
+                <tr>
+                  <th>Coordinates:</th>
+                </tr>
+                <td>{{coords}}</td>
+              </table>
+              <table class="addListingTable">
+                <tr>
+                  <th>Address:</th>
+                </tr>
+                <td>{{address}}</td>
+              </form>
+              </table>
+
             </div>
 
+
+
             <div ng-hide = "showAdd">
-              <h5>Add a new listing by filling out the information below:</h5>
+              <h4 class="addListingTitle">Add a new listing by filling out the information below:</h4>
+              
               <form class = "form-horizontal" role = "form">
-                Code:<br>
-                <input type="text" class = "form-control" name = "code" ng-model="entry.code"><br>
-                Building Name:<br>
-                <input type="text" class = "form-control" name = "name" ng-model="entry.name"><br>
+              <table class="addListingTable">
+                <tr>
+                  <th>Code:</th>
+                  <th>Building Name:</th>
+                </tr>
+                <td><input type="text" class = "form-control enterCode" name = "code" ng-model="entry.code"></td>
+                <td><input type="text" class = "form-control enterName" name = "name" ng-model="entry.name"></td>
+              </table>
+              
+              <table class="addListingTable">
+              
+                <tr>
+                  <th>Longitude:</th>
+                  <th>Latitude:</th>
+                </tr>
+                <td><input type="text" class = "form-control enterLongitude" name = "longitude" ng-model="entry.coordinates.longitude"></td>
+                <td><input type="text" class = "form-control enterLatitude" name = "latitude" ng-model="entry.coordinates.latitude"></td>
+              </table>
+              <table class="addListingTable">
+                <tr>
+                  <th>Address:</th>
+                </tr>
+                <td><input type="text" class = "form-control enterAddress" name = "address" ng-model="entry.address"></td>
+              </form>
+              </table>
+              
+                <!--
+              
+              <form class = "form-horizontal" role = "form">
+                Code:
+                <input type="text" class = "form-control enterCode" name = "code" ng-model="entry.code"><br>
+                Building Name:
+                <input type="text" class = "form-control enterName" name = "name" ng-model="entry.name"><br>
                 Coordinates<br>
                 Longitude:<br>
-                <input type="text" class = "form-control" name = "longitude" ng-model="entry.coordinates.longitude"><br>
+                <input type="text" class = "form-control enterLongitude" name = "longitude" ng-model="entry.coordinates.longitude"><br>
                 Latitude:<br>
-                <input type="text" class = "form-control" name = "latitude" ng-model="entry.coordinates.latitude"><br>
+                <input type="text" class = "form-control enterLatitude" name = "latitude" ng-model="entry.coordinates.latitude"><br>
                 Address:<br>
-                <input type="text" class = "form-control" name = "address" ng-model="entry.address">
-                <br><br>
-                <button ng-click="addListing(entry)" class="btn btn-alt">Submit New Listing</button>
+                <input type="text" class = "form-control enterAddress" name = "address" ng-model="entry.address">
               </form>
+
+              -->
+              
+              <br>
+              <button ng-click="addListing(entry)" class="btn btn-alt col-md-4 col-md-offset-4">Submit New Listing</button>
             </div>
             
           </div>
             <div class = "alert alert-success" ng-hide = "showListAdded">
               <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-              <strong>Success!</strong> Listing successfully added!
+              <strong>Listing successfully added!</strong> 
             </div>
         </div>
-        <button ng-click="addButton()" class="col-md-2 col-md-offset-2 btn btn-alt">Add a new listing!</button>
+        <button ng-hide="addListButton" ng-click="addButton()" class="col-md-2 col-md-offset-2 btn btn-alt">Add a new listing!</button>
       </div>
 
 
