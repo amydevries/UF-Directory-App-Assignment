@@ -6,7 +6,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
     /*
       Implement these functions in the controller to make your application function
-      as described in the assignment spec.
+      as described in the assignment spec. DONE.
      */
 
     $scope.addListButton = false; 
@@ -17,17 +17,20 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
 
     $scope.addButton = function(){
+      $scope.showAdd = false;
       $scope.showInfo = true;
       $scope.defaultMessage = true; 
       $scope.addListButton = true; 
-      $scope.showAdd = false;
+      
     }
 
 
     $scope.addListing = function(entry) {
         
+      
 
       $scope.listings.push(entry);
+      $scope.entry = null;
 
       $scope.showAdd = true;
       $scope.showInfo = true;
@@ -35,14 +38,11 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.showListAdded = false; 
       $scope.defaultMessage = false; 
       $scope.addListButton = false; 
+
     };
 
 
     $scope.deleteListing = function(listing) {
-      /*
-      removing something from the todo list
-      $scope.todos.splice(index,1);
-      */
       
 
       if(confirm("Press OK to confirm deletion.")){
