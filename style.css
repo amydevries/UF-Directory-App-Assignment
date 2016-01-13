@@ -6,3 +6,125 @@
   max-height: 400px;
   overflow: auto;
 }
+
+.table{
+	background: white; 
+}
+
+/*
+===================================
+Custom styles
+===================================
+*/
+
+body{
+  background: #424445;
+ // background: white; 
+  //color: #888;
+  font: 300 16px/22px "Yanone Kaffeesatz", sans-serif;
+}
+
+/*
+========================
+Typography
+========================
+*/
+
+.title{
+	color:white;
+	//color: black; 
+}
+
+
+/*
+========================
+Details panel
+========================
+*/
+
+.clickToDisplay{
+	text-align: center;
+	font-weight: bold;
+}
+
+/*
+===================================
+Buttons
+===================================
+*/
+
+.btn{
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-align: center;
+  //text-transform: uppercase;
+}
+
+.btn-alt{
+  border: 1px solid white;
+  background-color: #CDD2D4;
+  padding: 10px 30px;
+}
+
+.btn-alt:hover{
+  background: black;
+  color: white;
+}
+
+
+/*
+========================
+Row
+========================
+*/
+
+/*.row{
+  background-color: blue;
+  padding: 40px 0 44px 0;
+}*/
+
+/*
+===================================
+Add Listing Format
+===================================
+*/
+
+.codeWidth{
+	width: 40%;
+}
+
+.addListingTitle{
+	text-align: center;
+}
+
+.addListingTable{
+	width: 100%;
+}
+
+.enterCode{
+	width: 100%;
+}
+
+.codeTitle{
+	width:20%;
+}
+
+.enterName{
+	width: 100%;
+}
+
+.nameTitle{
+	width: 65%;
+}
+
+.enterLongitude{
+	width: 100%;
+}
+
+.enterLatitude{
+	width: 100%;
+}
