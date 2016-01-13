@@ -26,11 +26,8 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
 
     $scope.addListing = function(entry) {
-        
-      
-
+    
       $scope.listings.push(entry);
-      $scope.entry = null;
 
       $scope.showAdd = true;
       $scope.showInfo = true;
@@ -38,6 +35,8 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.showListAdded = false; 
       $scope.defaultMessage = false; 
       $scope.addListButton = false; 
+
+      $scope.entry = null;
 
     };
 
