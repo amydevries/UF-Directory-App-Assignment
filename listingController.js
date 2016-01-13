@@ -62,6 +62,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         $scope.showInfo = false;
         $scope.defaultMessage = true;
         $scope.showAdd = true;
+        $scope.addListButton = false;
 
         $scope.code = '';
         $scope.building = '';
