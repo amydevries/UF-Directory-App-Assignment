@@ -37,7 +37,7 @@
                       * include a way to remove individual listings
                 -->
 
-              <tr ng-repeat = "listing in listings | filter: query track by $index" ng-click = "showDetails($index)" >
+              <tr ng-repeat = "listing in listings | orderBy:'code' | filter: query track by $index" ng-click = "showDetails($index)" >
                 <td>{{listing.code}}</td>
                 <td>{{listing.name}}</td>
                 <td>
