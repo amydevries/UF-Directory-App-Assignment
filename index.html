@@ -16,10 +16,9 @@
       <div ng-controller="ListingsController">
         <div class="col-md-6">
           <div class="input-group" id="searchBar">
+
             <!--
-
                 Implement a way to filter through listings using the search bar. DONE
-
               -->
 
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
@@ -34,8 +33,8 @@
                 <th>Remove Listing</th>
                 <th></th>
               </tr>
-              <!--
 
+              <!--
                   Fill in the rest of the table:
                       * populate the rows with the code and name of each listing. DONE
                       * include a way to remove individual listings. DONE
@@ -50,11 +49,11 @@
               </tr>
             </table>
           </div>
+
           <!--
-
               Write an HTML form that adds new listings to the directory. DONE
-
             -->
+
         </div>
         <div class="col-md-6">
           <div class="jumbotron">
@@ -63,20 +62,11 @@
             </div>
             <div ng-hide = "showInfo">
               <h2 class="clickToDisplay">Detailed Information</h2>
+
               <!--
                 Include a way to display detailed information about an individual listing:
                      * consider how to use ng-click within the the table to implement this feature. DONE
                -->
-               <!--
-               <h4>Code:</h4>
-               <h5>{{code}}</h5>
-               <h4>Building Name:</h4>
-               <h5>{{building}}</h5>
-               <h4>Coordinates:</h4>
-               <h5>{{coords}}</h5>
-               <h4>Address:</h4>
-               <h5>{{address}}</h5>
-              -->
 
               <table class="addListingTable">
                 <tr>
@@ -103,8 +93,6 @@
               </table>
 
             </div>
-
-
 
             <div ng-hide = "showAdd">
               <h4 class="addListingTitle">Add a new listing by filling out the information below:</h4>
@@ -136,24 +124,6 @@
               </form>
               </table>
 
-                <!--
-
-              <form class = "form-horizontal" role = "form">
-                Code:
-                <input type="text" class = "form-control enterCode" name = "code" ng-model="entry.code"><br>
-                Building Name:
-                <input type="text" class = "form-control enterName" name = "name" ng-model="entry.name"><br>
-                Coordinates<br>
-                Longitude:<br>
-                <input type="text" class = "form-control enterLongitude" name = "longitude" ng-model="entry.coordinates.longitude"><br>
-                Latitude:<br>
-                <input type="text" class = "form-control enterLatitude" name = "latitude" ng-model="entry.coordinates.latitude"><br>
-                Address:<br>
-                <input type="text" class = "form-control enterAddress" name = "address" ng-model="entry.address">
-              </form>
-
-              -->
-
               <br>
               <button ng-click="addListing(entry)" class="btn btn-alt col-md-4 col-md-offset-4">Submit New Listing</button>
             </div>
@@ -166,8 +136,6 @@
         </div>
         <button ng-hide="addListButton" ng-click="addButton()" class="col-md-2 col-md-offset-2 btn btn-alt">Add a new listing!</button>
       </div>
-
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
