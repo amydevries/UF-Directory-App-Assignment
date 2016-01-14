@@ -15,7 +15,6 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
     $scope.showListAdded = true;
     $scope.defaultMessage = false;
 
-
     $scope.addButton = function(){
       $scope.showAdd = false;
       $scope.showInfo = true;
@@ -24,7 +23,6 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.showListAdded = true;
 
     }
-
 
     $scope.addListing = function(entry) {
 
@@ -44,15 +42,12 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
     $scope.deleteListing = function(listing) {
 
-
       if(confirm("Press OK to confirm deletion.")){
         $scope.listings.splice($scope.listings.indexOf(listing),1);
         $scope.showInfo = true;
         $scope.defaultMessage = false;
       }
     };
-
-
 
     $scope.showDetails = function(listing) {
         $scope.showInfo = false;

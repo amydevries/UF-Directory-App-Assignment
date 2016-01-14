@@ -19,8 +19,6 @@ Custom styles
 
 body{
   background: #424445;
- // background: white; 
-  //color: #888;
   font: 300 16px/22px "Yanone Kaffeesatz", sans-serif;
 }
 
@@ -61,7 +59,6 @@ Buttons
   font-weight: 400;
   letter-spacing: .5px;
   text-align: center;
-  //text-transform: uppercase;
 }
 
 .btn-alt{
@@ -74,18 +71,6 @@ Buttons
   background: black;
   color: white;
 }
-
-
-/*
-========================
-Row
-========================
-*/
-
-/*.row{
-  background-color: blue;
-  padding: 40px 0 44px 0;
-}*/
 
 /*
 ===================================
